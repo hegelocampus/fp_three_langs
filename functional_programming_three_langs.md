@@ -21,7 +21,7 @@
   - Everything but tuples are mutable - This encourages changing values
   - Functional programming tools like reduce are hidden away in the `functools` library that must be manually loaded when needed.
   - Because of its imperative nature iterators aren't able to be processed nearly as efficiently as in Rust and Haskell. Although Lazily evaluated iterators are a feature of the language, they aren't evaluated _as_ lazily as they are in a more functional forward language.
-  - No multi-line lambdas. This is actually what drove me to write this article. Multi-line lambdas are a fundamental part of my workflow, when I learned that Python had no syntax to possibly allow for this it quickly made me realize that Python will never be my go-to for writing more complex programs.
+  - No multi-line lambdas. This is actually what drove me to write this article. Multi-line lambdas are a fundamental part of my workflow, when I learned that Python had no syntax to possibly allow for this it quickly made me realize that Python isn't a strong language pick for functional programming. Unfortunately it seems like this will always be the case because Pythons creator doesn't like how multi-line lambdas look and many Python developers seem to discourage lambda use all together.
 
 #### Examples 
 - First, an example of a non-functional, imperative implementation in order to ground our understanding of functional programming against what it is not.
@@ -32,7 +32,11 @@
 ### Rust
 - Not a strictly functional language and it can be (and often is) used imperatively,
 - Although it is strictly typed and all values are static unless denoted otherwise using the `mut` keyword
-- Also has built in superstructure to allow for much
+- Also has built in superstructure to allow for much more intuitive functional programming:
+  - Lazy iterators:
+	- Lazy iterators are operations on lists that aren't actually evaluated until the value needs to be displayed. For example: if you were to do something like `putStrLn . sum . map (/2) . map (*4) $ map (+2) [x, y, z]`, each of the values in the list would be a pure function value until it needs to be displayed. This results in this complex operation only needing to actually access each of the elements in the list a single time rather then the 4 times it appears they are operated on. To make it abundantly clear here: The way the compiler actually tackles this operation is by doing something like creating a list like this `[(((x + 2) * 4) / 2), (((y + ) * 4) / 2), (((y + ) * 4) / 2)]` and then when the value actually needs to shown, all of the values are assessed in one single iteration.
+  - Multi-line lambdas
+  -
 
 #### Examples
 - Example

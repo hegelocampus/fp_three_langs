@@ -1,0 +1,291 @@
+2020-07-16 10:25:54,003 INFO Constructing shared directory `/home/bee/appaccademy/tech_writing/fp_three_langs/examples/.pyre/shared_analysis_directory_1318956`
+2020-07-16 10:25:54,003 ERROR No targets or source directories to analyze.
+Did you mean to run the command within a Pyre project?
+(A Pyre project is a directory with a `.pyre_configuration.local` file.
+If it is in directory foo/, you can also run `pyre -l foo`.)
+See `pyre --help` for more details.
+
+2020-07-16 10:27:57,989 INFO Constructing shared directory `/home/bee/appaccademy/tech_writing/fp_three_langs/examples/.pyre/shared_analysis_directory_1319364`
+2020-07-16 10:27:57,990 ERROR No targets or source directories to analyze.
+Did you mean to run the command within a Pyre project?
+(A Pyre project is a directory with a `.pyre_configuration.local` file.
+If it is in directory foo/, you can also run `pyre -l foo`.)
+See `pyre --help` for more details.
+
+2020-07-16 10:28:27,137 INFO Binary found at `/home/bee/.local/bin/pyre.bin`
+2020-07-16 10:28:27,137 DEBUG Trying with: `/home/bee/.local/lib/python3.8/site-packages/pyre_check/client/pyre_check/typeshed/`
+2020-07-16 10:28:27,137 DEBUG Trying with: `/home/bee/.local/lib/python3.8/site-packages/pyre_check/pyre_check/typeshed/`
+2020-07-16 10:28:27,137 DEBUG Trying with: `/home/bee/.local/lib/python3.8/site-packages/pyre_check/typeshed/`
+2020-07-16 10:28:27,137 DEBUG Trying with: `/home/bee/.local/lib/python3.8/pyre_check/typeshed/`
+2020-07-16 10:28:27,137 DEBUG Trying with: `/home/bee/.local/lib/pyre_check/typeshed/`
+2020-07-16 10:28:27,137 DEBUG Trying with: `/home/bee/.local/lib/python3.8/site-packages/pyre_check/client/pyre_check/taint/`
+2020-07-16 10:28:27,137 DEBUG Trying with: `/home/bee/.local/lib/python3.8/site-packages/pyre_check/pyre_check/taint/`
+2020-07-16 10:28:27,138 DEBUG Trying with: `/home/bee/.local/lib/python3.8/site-packages/pyre_check/taint/`
+2020-07-16 10:28:27,138 DEBUG Trying with: `/home/bee/.local/lib/python3.8/pyre_check/taint/`
+2020-07-16 10:28:27,138 DEBUG Trying with: `/home/bee/.local/lib/pyre_check/taint/`
+2020-07-16 10:28:27,145 PROMPT Which directory should pyre be initialized in? (Default: `.`): 
+2020-07-16 10:28:28,806 INFO Successfully initialized pyre! You can view the configuration at `/home/bee/appaccademy/tech_writing/fp_three_langs/examples/.pyre_configuration`.
+2020-07-16 10:28:33,604 DEBUG Running `/home/bee/.local/bin/pyre.bin check -logging-sections parser -project-root /home/bee/appaccademy/tech_writing/fp_three_langs/examples -log-directory /home/bee/appaccademy/tech_writing/fp_three_langs/examples/.pyre -filter-directories /home/bee/appaccademy/tech_writing/fp_three_langs/examples -workers 4 -ignore-all-errors /home/bee/appaccademy/tech_writing/fp_three_langs/examples/.pyre -search-path /home/bee/.local/lib/pyre_check/typeshed/stdlib/3.7,/home/bee/.local/lib/pyre_check/typeshed/stdlib/3.6,/home/bee/.local/lib/pyre_check/typeshed/stdlib/3,/home/bee/.local/lib/pyre_check/typeshed/stdlib/2and3,/home/bee/.local/lib/pyre_check/typeshed/third_party/3,/home/bee/.local/lib/pyre_check/typeshed/third_party/2and3 .`
+2020-07-16 10:28:33,635 DEBUG Registering process with pid 1319476 in pid file `/home/bee/appaccademy/tech_writing/fp_three_langs/examples/.pyre/pid_files/check-1319476.pid`
+2020-07-16 10:28:33,884 PERFORMANCE Module tracker built: 0.050117s
+2020-07-16 10:28:33,884 INFO Parsing 927 stubs and sources...
+2020-07-16 10:28:35,067 PERFORMANCE Sources parsed: 1.182841s
+2020-07-16 10:28:35,067 INFO Building type environment...
+2020-07-16 10:28:35,510 INFO Updating is from empty stub result Environment
+2020-07-16 10:28:35,510 INFO Updating Alias Environment
+2020-07-16 10:28:35,510 INFO Updating Edges Environment
+2020-07-16 10:28:35,510 INFO Updating Undecorated functions Environment
+2020-07-16 10:28:35,510 INFO Updating Class metadata Environment
+2020-07-16 10:28:35,510 INFO Updating parse annotation Environment
+2020-07-16 10:28:35,510 INFO Updating attributes Environment
+2020-07-16 10:28:35,511 INFO Updating Global Environment
+2020-07-16 10:28:35,511 INFO Updating Global Locations Environment
+2020-07-16 10:28:35,511 PERFORMANCE Full environment built: 0.443271s
+2020-07-16 10:28:35,596 INFO Checking 11 functions...
+2020-07-16 10:28:35,679 INFO Processed 11 of 11 functions
+2020-07-16 10:28:35,679 PERFORMANCE Check_TypeCheck: 0.082694s
+2020-07-16 10:28:35,679 MEMORY Shared memory size post-typecheck (size: 13)
+2020-07-16 10:28:35,679 INFO Postprocessing 927 sources...
+2020-07-16 10:28:35,714 INFO Postprocessed 116 of 927 sources
+2020-07-16 10:28:35,724 INFO Postprocessed 232 of 927 sources
+2020-07-16 10:28:35,736 INFO Postprocessed 348 of 927 sources
+2020-07-16 10:28:35,748 INFO Postprocessed 464 of 927 sources
+2020-07-16 10:28:35,762 INFO Postprocessed 580 of 927 sources
+2020-07-16 10:28:35,765 INFO Postprocessed 696 of 927 sources
+2020-07-16 10:28:35,776 INFO Postprocessed 812 of 927 sources
+2020-07-16 10:28:35,801 INFO Postprocessed 927 of 927 sources
+2020-07-16 10:28:35,802 PERFORMANCE Check: 1.978643s
+2020-07-16 10:28:35,816 DEBUG Removing pid file: `/home/bee/appaccademy/tech_writing/fp_three_langs/examples/.pyre/pid_files/check-1319476.pid`
+2020-07-16 10:28:35,858 ERROR Found 6 type errors!
+
+2020-07-16 10:32:15,482 DEBUG Running `/home/bee/.local/bin/pyre.bin check -logging-sections parser -project-root /home/bee/appaccademy/tech_writing/fp_three_langs/examples -log-directory /home/bee/appaccademy/tech_writing/fp_three_langs/examples/.pyre -filter-directories /home/bee/appaccademy/tech_writing/fp_three_langs/examples -workers 4 -ignore-all-errors /home/bee/appaccademy/tech_writing/fp_three_langs/examples/.pyre -search-path /home/bee/.local/lib/pyre_check/typeshed/stdlib/3.7,/home/bee/.local/lib/pyre_check/typeshed/stdlib/3.6,/home/bee/.local/lib/pyre_check/typeshed/stdlib/3,/home/bee/.local/lib/pyre_check/typeshed/stdlib/2and3,/home/bee/.local/lib/pyre_check/typeshed/third_party/3,/home/bee/.local/lib/pyre_check/typeshed/third_party/2and3 .`
+2020-07-16 10:32:15,487 DEBUG Registering process with pid 1319950 in pid file `/home/bee/appaccademy/tech_writing/fp_three_langs/examples/.pyre/pid_files/check-1319950.pid`
+2020-07-16 10:32:15,542 PERFORMANCE Module tracker built: 0.030232s
+2020-07-16 10:32:15,542 INFO Parsing 927 stubs and sources...
+2020-07-16 10:32:16,470 PERFORMANCE Sources parsed: 0.927474s
+2020-07-16 10:32:16,470 INFO Building type environment...
+2020-07-16 10:32:16,918 INFO Updating is from empty stub result Environment
+2020-07-16 10:32:16,918 INFO Updating Alias Environment
+2020-07-16 10:32:16,919 INFO Updating Edges Environment
+2020-07-16 10:32:16,919 INFO Updating Undecorated functions Environment
+2020-07-16 10:32:16,919 INFO Updating Class metadata Environment
+2020-07-16 10:32:16,919 INFO Updating parse annotation Environment
+2020-07-16 10:32:16,919 INFO Updating attributes Environment
+2020-07-16 10:32:16,919 INFO Updating Global Environment
+2020-07-16 10:32:16,919 INFO Updating Global Locations Environment
+2020-07-16 10:32:16,919 PERFORMANCE Full environment built: 0.448353s
+2020-07-16 10:32:17,007 INFO Checking 11 functions...
+2020-07-16 10:32:17,055 INFO Processed 11 of 11 functions
+2020-07-16 10:32:17,056 PERFORMANCE Check_TypeCheck: 0.048320s
+2020-07-16 10:32:17,056 MEMORY Shared memory size post-typecheck (size: 13)
+2020-07-16 10:32:17,056 INFO Postprocessing 927 sources...
+2020-07-16 10:32:17,094 INFO Postprocessed 116 of 927 sources
+2020-07-16 10:32:17,097 INFO Postprocessed 232 of 927 sources
+2020-07-16 10:32:17,099 INFO Postprocessed 348 of 927 sources
+2020-07-16 10:32:17,101 INFO Postprocessed 464 of 927 sources
+2020-07-16 10:32:17,136 INFO Postprocessed 580 of 927 sources
+2020-07-16 10:32:17,141 INFO Postprocessed 696 of 927 sources
+2020-07-16 10:32:17,144 INFO Postprocessed 811 of 927 sources
+2020-07-16 10:32:17,173 INFO Postprocessed 927 of 927 sources
+2020-07-16 10:32:17,174 PERFORMANCE Check: 1.664214s
+2020-07-16 10:32:17,181 DEBUG Removing pid file: `/home/bee/appaccademy/tech_writing/fp_three_langs/examples/.pyre/pid_files/check-1319950.pid`
+2020-07-16 10:32:17,210 ERROR Found 6 type errors!
+
+2020-07-16 10:32:30,866 DEBUG Running `/home/bee/.local/bin/pyre.bin check -logging-sections parser -project-root /home/bee/appaccademy/tech_writing/fp_three_langs/examples -log-directory /home/bee/appaccademy/tech_writing/fp_three_langs/examples/.pyre -filter-directories /home/bee/appaccademy/tech_writing/fp_three_langs/examples -workers 4 -ignore-all-errors /home/bee/appaccademy/tech_writing/fp_three_langs/examples/.pyre -search-path /home/bee/.local/lib/pyre_check/typeshed/stdlib/3.7,/home/bee/.local/lib/pyre_check/typeshed/stdlib/3.6,/home/bee/.local/lib/pyre_check/typeshed/stdlib/3,/home/bee/.local/lib/pyre_check/typeshed/stdlib/2and3,/home/bee/.local/lib/pyre_check/typeshed/third_party/3,/home/bee/.local/lib/pyre_check/typeshed/third_party/2and3 .`
+2020-07-16 10:32:30,870 DEBUG Registering process with pid 1320073 in pid file `/home/bee/appaccademy/tech_writing/fp_three_langs/examples/.pyre/pid_files/check-1320073.pid`
+2020-07-16 10:32:30,925 PERFORMANCE Module tracker built: 0.029831s
+2020-07-16 10:32:30,925 INFO Parsing 927 stubs and sources...
+2020-07-16 10:32:31,940 PERFORMANCE Sources parsed: 1.014596s
+2020-07-16 10:32:31,940 INFO Building type environment...
+2020-07-16 10:32:32,297 INFO Updating is from empty stub result Environment
+2020-07-16 10:32:32,297 INFO Updating Alias Environment
+2020-07-16 10:32:32,297 INFO Updating Edges Environment
+2020-07-16 10:32:32,297 INFO Updating Undecorated functions Environment
+2020-07-16 10:32:32,297 INFO Updating Class metadata Environment
+2020-07-16 10:32:32,297 INFO Updating parse annotation Environment
+2020-07-16 10:32:32,297 INFO Updating attributes Environment
+2020-07-16 10:32:32,298 INFO Updating Global Environment
+2020-07-16 10:32:32,298 INFO Updating Global Locations Environment
+2020-07-16 10:32:32,298 PERFORMANCE Full environment built: 0.356756s
+2020-07-16 10:32:32,393 INFO Checking 11 functions...
+2020-07-16 10:32:32,478 INFO Processed 11 of 11 functions
+2020-07-16 10:32:32,479 PERFORMANCE Check_TypeCheck: 0.085521s
+2020-07-16 10:32:32,479 MEMORY Shared memory size post-typecheck (size: 13)
+2020-07-16 10:32:32,479 INFO Postprocessing 927 sources...
+2020-07-16 10:32:32,516 INFO Postprocessed 116 of 927 sources
+2020-07-16 10:32:32,517 INFO Postprocessed 232 of 927 sources
+2020-07-16 10:32:32,523 INFO Postprocessed 348 of 927 sources
+2020-07-16 10:32:32,533 INFO Postprocessed 464 of 927 sources
+2020-07-16 10:32:32,558 INFO Postprocessed 580 of 927 sources
+2020-07-16 10:32:32,572 INFO Postprocessed 695 of 927 sources
+2020-07-16 10:32:32,602 INFO Postprocessed 811 of 927 sources
+2020-07-16 10:32:32,602 INFO Postprocessed 927 of 927 sources
+2020-07-16 10:32:32,603 PERFORMANCE Check: 1.709448s
+2020-07-16 10:32:32,610 DEBUG Removing pid file: `/home/bee/appaccademy/tech_writing/fp_three_langs/examples/.pyre/pid_files/check-1320073.pid`
+2020-07-16 10:32:32,659 ERROR Found 5 type errors!
+
+2020-07-16 10:35:32,400 DEBUG Running `/home/bee/.local/bin/pyre.bin check -logging-sections parser -project-root /home/bee/appaccademy/tech_writing/fp_three_langs/examples -log-directory /home/bee/appaccademy/tech_writing/fp_three_langs/examples/.pyre -filter-directories /home/bee/appaccademy/tech_writing/fp_three_langs/examples -workers 4 -ignore-all-errors /home/bee/appaccademy/tech_writing/fp_three_langs/examples/.pyre -search-path /home/bee/.local/lib/pyre_check/typeshed/stdlib/3.7,/home/bee/.local/lib/pyre_check/typeshed/stdlib/3.6,/home/bee/.local/lib/pyre_check/typeshed/stdlib/3,/home/bee/.local/lib/pyre_check/typeshed/stdlib/2and3,/home/bee/.local/lib/pyre_check/typeshed/third_party/3,/home/bee/.local/lib/pyre_check/typeshed/third_party/2and3 .`
+2020-07-16 10:35:32,404 DEBUG Registering process with pid 1320500 in pid file `/home/bee/appaccademy/tech_writing/fp_three_langs/examples/.pyre/pid_files/check-1320500.pid`
+2020-07-16 10:35:32,468 PERFORMANCE Module tracker built: 0.030289s
+2020-07-16 10:35:32,469 INFO Parsing 927 stubs and sources...
+2020-07-16 10:35:33,423 PERFORMANCE Sources parsed: 0.954214s
+2020-07-16 10:35:33,423 INFO Building type environment...
+2020-07-16 10:35:33,826 INFO Updating is from empty stub result Environment
+2020-07-16 10:35:33,826 INFO Updating Alias Environment
+2020-07-16 10:35:33,826 INFO Updating Edges Environment
+2020-07-16 10:35:33,826 INFO Updating Undecorated functions Environment
+2020-07-16 10:35:33,826 INFO Updating Class metadata Environment
+2020-07-16 10:35:33,826 INFO Updating parse annotation Environment
+2020-07-16 10:35:33,827 INFO Updating attributes Environment
+2020-07-16 10:35:33,827 INFO Updating Global Environment
+2020-07-16 10:35:33,827 INFO Updating Global Locations Environment
+2020-07-16 10:35:33,827 PERFORMANCE Full environment built: 0.403155s
+2020-07-16 10:35:33,916 INFO Checking 11 functions...
+2020-07-16 10:35:33,963 INFO Processed 11 of 11 functions
+2020-07-16 10:35:33,964 PERFORMANCE Check_TypeCheck: 0.047689s
+2020-07-16 10:35:33,964 MEMORY Shared memory size post-typecheck (size: 13)
+2020-07-16 10:35:33,964 INFO Postprocessing 927 sources...
+2020-07-16 10:35:34,003 INFO Postprocessed 116 of 927 sources
+2020-07-16 10:35:34,007 INFO Postprocessed 232 of 927 sources
+2020-07-16 10:35:34,009 INFO Postprocessed 348 of 927 sources
+2020-07-16 10:35:34,031 INFO Postprocessed 464 of 927 sources
+2020-07-16 10:35:34,048 INFO Postprocessed 580 of 927 sources
+2020-07-16 10:35:34,048 INFO Postprocessed 696 of 927 sources
+2020-07-16 10:35:34,055 INFO Postprocessed 812 of 927 sources
+2020-07-16 10:35:34,070 INFO Postprocessed 927 of 927 sources
+2020-07-16 10:35:34,071 PERFORMANCE Check: 1.635950s
+2020-07-16 10:35:34,078 DEBUG Removing pid file: `/home/bee/appaccademy/tech_writing/fp_three_langs/examples/.pyre/pid_files/check-1320500.pid`
+2020-07-16 10:35:34,119 ERROR Found 4 type errors!
+
+2020-07-16 10:35:44,413 DEBUG Running `/home/bee/.local/bin/pyre.bin check -logging-sections parser -project-root /home/bee/appaccademy/tech_writing/fp_three_langs/examples -log-directory /home/bee/appaccademy/tech_writing/fp_three_langs/examples/.pyre -filter-directories /home/bee/appaccademy/tech_writing/fp_three_langs/examples -workers 4 -ignore-all-errors /home/bee/appaccademy/tech_writing/fp_three_langs/examples/.pyre -search-path /home/bee/.local/lib/pyre_check/typeshed/stdlib/3.7,/home/bee/.local/lib/pyre_check/typeshed/stdlib/3.6,/home/bee/.local/lib/pyre_check/typeshed/stdlib/3,/home/bee/.local/lib/pyre_check/typeshed/stdlib/2and3,/home/bee/.local/lib/pyre_check/typeshed/third_party/3,/home/bee/.local/lib/pyre_check/typeshed/third_party/2and3 .`
+2020-07-16 10:35:44,419 DEBUG Registering process with pid 1320628 in pid file `/home/bee/appaccademy/tech_writing/fp_three_langs/examples/.pyre/pid_files/check-1320628.pid`
+2020-07-16 10:35:44,478 PERFORMANCE Module tracker built: 0.032631s
+2020-07-16 10:35:44,478 INFO Parsing 927 stubs and sources...
+2020-07-16 10:35:45,412 PERFORMANCE Sources parsed: 0.934216s
+2020-07-16 10:35:45,413 INFO Building type environment...
+2020-07-16 10:35:45,853 INFO Updating is from empty stub result Environment
+2020-07-16 10:35:45,854 INFO Updating Alias Environment
+2020-07-16 10:35:45,854 INFO Updating Edges Environment
+2020-07-16 10:35:45,854 INFO Updating Undecorated functions Environment
+2020-07-16 10:35:45,855 INFO Updating Class metadata Environment
+2020-07-16 10:35:45,855 INFO Updating parse annotation Environment
+2020-07-16 10:35:45,856 INFO Updating attributes Environment
+2020-07-16 10:35:45,857 INFO Updating Global Environment
+2020-07-16 10:35:45,858 INFO Updating Global Locations Environment
+2020-07-16 10:35:45,858 PERFORMANCE Full environment built: 0.440727s
+2020-07-16 10:35:45,945 INFO Checking 11 functions...
+2020-07-16 10:35:45,990 INFO Processed 11 of 11 functions
+2020-07-16 10:35:45,990 PERFORMANCE Check_TypeCheck: 0.044959s
+2020-07-16 10:35:45,990 MEMORY Shared memory size post-typecheck (size: 13)
+2020-07-16 10:35:45,990 INFO Postprocessing 927 sources...
+2020-07-16 10:35:46,025 INFO Postprocessed 116 of 927 sources
+2020-07-16 10:35:46,033 INFO Postprocessed 232 of 927 sources
+2020-07-16 10:35:46,058 INFO Postprocessed 348 of 927 sources
+2020-07-16 10:35:46,062 INFO Postprocessed 464 of 927 sources
+2020-07-16 10:35:46,069 INFO Postprocessed 580 of 927 sources
+2020-07-16 10:35:46,074 INFO Postprocessed 696 of 927 sources
+2020-07-16 10:35:46,116 INFO Postprocessed 812 of 927 sources
+2020-07-16 10:35:46,135 INFO Postprocessed 927 of 927 sources
+2020-07-16 10:35:46,136 PERFORMANCE Check: 1.693309s
+2020-07-16 10:35:46,145 DEBUG Removing pid file: `/home/bee/appaccademy/tech_writing/fp_three_langs/examples/.pyre/pid_files/check-1320628.pid`
+2020-07-16 10:35:46,215 ERROR Found 4 type errors!
+
+2020-07-16 10:37:18,268 DEBUG Running `/home/bee/.local/bin/pyre.bin check -logging-sections parser -project-root /home/bee/appaccademy/tech_writing/fp_three_langs/examples -log-directory /home/bee/appaccademy/tech_writing/fp_three_langs/examples/.pyre -filter-directories /home/bee/appaccademy/tech_writing/fp_three_langs/examples -workers 4 -ignore-all-errors /home/bee/appaccademy/tech_writing/fp_three_langs/examples/.pyre -search-path /home/bee/.local/lib/pyre_check/typeshed/stdlib/3.7,/home/bee/.local/lib/pyre_check/typeshed/stdlib/3.6,/home/bee/.local/lib/pyre_check/typeshed/stdlib/3,/home/bee/.local/lib/pyre_check/typeshed/stdlib/2and3,/home/bee/.local/lib/pyre_check/typeshed/third_party/3,/home/bee/.local/lib/pyre_check/typeshed/third_party/2and3 .`
+2020-07-16 10:37:18,275 DEBUG Registering process with pid 1320939 in pid file `/home/bee/appaccademy/tech_writing/fp_three_langs/examples/.pyre/pid_files/check-1320939.pid`
+2020-07-16 10:37:18,358 PERFORMANCE Module tracker built: 0.029422s
+2020-07-16 10:37:18,358 INFO Parsing 927 stubs and sources...
+2020-07-16 10:37:19,324 PERFORMANCE Sources parsed: 0.965740s
+2020-07-16 10:37:19,324 INFO Building type environment...
+2020-07-16 10:37:19,769 INFO Updating is from empty stub result Environment
+2020-07-16 10:37:19,769 INFO Updating Alias Environment
+2020-07-16 10:37:19,770 INFO Updating Edges Environment
+2020-07-16 10:37:19,770 INFO Updating Undecorated functions Environment
+2020-07-16 10:37:19,770 INFO Updating Class metadata Environment
+2020-07-16 10:37:19,770 INFO Updating parse annotation Environment
+2020-07-16 10:37:19,770 INFO Updating attributes Environment
+2020-07-16 10:37:19,770 INFO Updating Global Environment
+2020-07-16 10:37:19,770 INFO Updating Global Locations Environment
+2020-07-16 10:37:19,770 PERFORMANCE Full environment built: 0.445165s
+2020-07-16 10:37:19,854 INFO Checking 11 functions...
+2020-07-16 10:37:19,938 INFO Processed 11 of 11 functions
+2020-07-16 10:37:19,938 PERFORMANCE Check_TypeCheck: 0.084489s
+2020-07-16 10:37:19,938 MEMORY Shared memory size post-typecheck (size: 13)
+2020-07-16 10:37:19,938 INFO Postprocessing 927 sources...
+2020-07-16 10:37:19,975 INFO Postprocessed 116 of 927 sources
+2020-07-16 10:37:19,977 INFO Postprocessed 232 of 927 sources
+2020-07-16 10:37:19,985 INFO Postprocessed 348 of 927 sources
+2020-07-16 10:37:19,986 INFO Postprocessed 464 of 927 sources
+2020-07-16 10:37:20,023 INFO Postprocessed 580 of 927 sources
+2020-07-16 10:37:20,023 INFO Postprocessed 696 of 927 sources
+2020-07-16 10:37:20,027 INFO Postprocessed 811 of 927 sources
+2020-07-16 10:37:20,028 INFO Postprocessed 927 of 927 sources
+2020-07-16 10:37:20,028 PERFORMANCE Check: 1.701980s
+2020-07-16 10:37:20,036 DEBUG Removing pid file: `/home/bee/appaccademy/tech_writing/fp_three_langs/examples/.pyre/pid_files/check-1320939.pid`
+2020-07-16 10:37:20,068 ERROR Found 4 type errors!
+
+2020-07-16 10:38:00,971 DEBUG Running `/home/bee/.local/bin/pyre.bin check -logging-sections parser -project-root /home/bee/appaccademy/tech_writing/fp_three_langs/examples -log-directory /home/bee/appaccademy/tech_writing/fp_three_langs/examples/.pyre -filter-directories /home/bee/appaccademy/tech_writing/fp_three_langs/examples -workers 4 -ignore-all-errors /home/bee/appaccademy/tech_writing/fp_three_langs/examples/.pyre -search-path /home/bee/.local/lib/pyre_check/typeshed/stdlib/3.7,/home/bee/.local/lib/pyre_check/typeshed/stdlib/3.6,/home/bee/.local/lib/pyre_check/typeshed/stdlib/3,/home/bee/.local/lib/pyre_check/typeshed/stdlib/2and3,/home/bee/.local/lib/pyre_check/typeshed/third_party/3,/home/bee/.local/lib/pyre_check/typeshed/third_party/2and3 .`
+2020-07-16 10:38:00,978 DEBUG Registering process with pid 1323232 in pid file `/home/bee/appaccademy/tech_writing/fp_three_langs/examples/.pyre/pid_files/check-1323232.pid`
+2020-07-16 10:38:01,063 PERFORMANCE Module tracker built: 0.030434s
+2020-07-16 10:38:01,063 INFO Parsing 927 stubs and sources...
+2020-07-16 10:38:01,978 PERFORMANCE Sources parsed: 0.915404s
+2020-07-16 10:38:01,979 INFO Building type environment...
+2020-07-16 10:38:02,442 INFO Updating is from empty stub result Environment
+2020-07-16 10:38:02,443 INFO Updating Alias Environment
+2020-07-16 10:38:02,443 INFO Updating Edges Environment
+2020-07-16 10:38:02,443 INFO Updating Undecorated functions Environment
+2020-07-16 10:38:02,443 INFO Updating Class metadata Environment
+2020-07-16 10:38:02,444 INFO Updating parse annotation Environment
+2020-07-16 10:38:02,444 INFO Updating attributes Environment
+2020-07-16 10:38:02,444 INFO Updating Global Environment
+2020-07-16 10:38:02,444 INFO Updating Global Locations Environment
+2020-07-16 10:38:02,445 PERFORMANCE Full environment built: 0.464012s
+2020-07-16 10:38:02,579 INFO Checking 11 functions...
+2020-07-16 10:38:02,646 INFO Processed 11 of 11 functions
+2020-07-16 10:38:02,647 PERFORMANCE Check_TypeCheck: 0.067488s
+2020-07-16 10:38:02,647 MEMORY Shared memory size post-typecheck (size: 13)
+2020-07-16 10:38:02,647 INFO Postprocessing 927 sources...
+2020-07-16 10:38:02,686 INFO Postprocessed 116 of 927 sources
+2020-07-16 10:38:02,689 INFO Postprocessed 232 of 927 sources
+2020-07-16 10:38:02,693 INFO Postprocessed 348 of 927 sources
+2020-07-16 10:38:02,712 INFO Postprocessed 464 of 927 sources
+2020-07-16 10:38:02,728 INFO Postprocessed 580 of 927 sources
+2020-07-16 10:38:02,729 INFO Postprocessed 696 of 927 sources
+2020-07-16 10:38:02,736 INFO Postprocessed 812 of 927 sources
+2020-07-16 10:38:02,751 INFO Postprocessed 927 of 927 sources
+2020-07-16 10:38:02,753 PERFORMANCE Check: 1.722560s
+2020-07-16 10:38:02,761 DEBUG Removing pid file: `/home/bee/appaccademy/tech_writing/fp_three_langs/examples/.pyre/pid_files/check-1323232.pid`
+2020-07-16 10:38:02,808 ERROR Found 2 type errors!
+
+2020-07-16 10:49:19,614 DEBUG Running `/home/bee/.local/bin/pyre.bin check -logging-sections parser -project-root /home/bee/appaccademy/tech_writing/fp_three_langs/examples -log-directory /home/bee/appaccademy/tech_writing/fp_three_langs/examples/.pyre -filter-directories /home/bee/appaccademy/tech_writing/fp_three_langs/examples -workers 4 -ignore-all-errors /home/bee/appaccademy/tech_writing/fp_three_langs/examples/.pyre -search-path /home/bee/.local/lib/pyre_check/typeshed/stdlib/3.7,/home/bee/.local/lib/pyre_check/typeshed/stdlib/3.6,/home/bee/.local/lib/pyre_check/typeshed/stdlib/3,/home/bee/.local/lib/pyre_check/typeshed/stdlib/2and3,/home/bee/.local/lib/pyre_check/typeshed/third_party/3,/home/bee/.local/lib/pyre_check/typeshed/third_party/2and3 .`
+2020-07-16 10:49:19,622 DEBUG Registering process with pid 1326706 in pid file `/home/bee/appaccademy/tech_writing/fp_three_langs/examples/.pyre/pid_files/check-1326706.pid`
+2020-07-16 10:49:19,692 PERFORMANCE Module tracker built: 0.030437s
+2020-07-16 10:49:19,692 INFO Parsing 927 stubs and sources...
+2020-07-16 10:49:20,603 PERFORMANCE Sources parsed: 0.911281s
+2020-07-16 10:49:20,604 INFO Building type environment...
+2020-07-16 10:49:21,055 INFO Updating is from empty stub result Environment
+2020-07-16 10:49:21,055 INFO Updating Alias Environment
+2020-07-16 10:49:21,056 INFO Updating Edges Environment
+2020-07-16 10:49:21,056 INFO Updating Undecorated functions Environment
+2020-07-16 10:49:21,056 INFO Updating Class metadata Environment
+2020-07-16 10:49:21,057 INFO Updating parse annotation Environment
+2020-07-16 10:49:21,057 INFO Updating attributes Environment
+2020-07-16 10:49:21,057 INFO Updating Global Environment
+2020-07-16 10:49:21,058 INFO Updating Global Locations Environment
+2020-07-16 10:49:21,058 PERFORMANCE Full environment built: 0.451384s
+2020-07-16 10:49:21,198 INFO Checking 11 functions...
+2020-07-16 10:49:21,285 INFO Processed 11 of 11 functions
+2020-07-16 10:49:21,286 PERFORMANCE Check_TypeCheck: 0.087381s
+2020-07-16 10:49:21,286 MEMORY Shared memory size post-typecheck (size: 13)
+2020-07-16 10:49:21,286 INFO Postprocessing 927 sources...
+2020-07-16 10:49:21,321 INFO Postprocessed 116 of 927 sources
+2020-07-16 10:49:21,327 INFO Postprocessed 232 of 927 sources
+2020-07-16 10:49:21,331 INFO Postprocessed 348 of 927 sources
+2020-07-16 10:49:21,354 INFO Postprocessed 464 of 927 sources
+2020-07-16 10:49:21,361 INFO Postprocessed 580 of 927 sources
+2020-07-16 10:49:21,384 INFO Postprocessed 696 of 927 sources
+2020-07-16 10:49:21,384 INFO Postprocessed 812 of 927 sources
+2020-07-16 10:49:21,394 INFO Postprocessed 927 of 927 sources
+2020-07-16 10:49:21,394 PERFORMANCE Check: 1.735126s
+2020-07-16 10:49:21,401 DEBUG Removing pid file: `/home/bee/appaccademy/tech_writing/fp_three_langs/examples/.pyre/pid_files/check-1326706.pid`
+2020-07-16 10:49:21,473 SUCCESS No type errors found
+

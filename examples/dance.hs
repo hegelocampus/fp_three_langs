@@ -1,14 +1,14 @@
 mrRoboto :: [String] -> (Int, Int)
-mrRoboto =
+mrRoboto instructions =
     foldl (\(acc_l, acc_r) (cur_l, cur_r) -> (acc_l + cur_l, acc_r + cur_r)) (0, 0)
-    . map (dirToIntPair . words)
-    where dirToIntPair [dir, strVal] =
-            case dir of
-                "up"    -> (0, val)
-                "down"  -> (0, -val)
-                "right" -> (val, 0)
-                "left"  -> (-val, 0)
-                where val = read strVal :: Int
+    $ map (dirToIntPair . words) instructions
+  where dirToIntPair [dir, strVal] =
+          let val = read strVal :: Int
+          in case dir of
+            "up"    -> (0, val)
+            "down"  -> (0, -val)
+            "right" -> (val, 0)
+            "left"  -> (-val, 0)
 
 main :: IO()
 main = do
@@ -18,4 +18,3 @@ main = do
     putStrLn $ "test2: " ++ show t2
     let t3 = mrRoboto []
     putStrLn $ "test3: " ++ show t3
-

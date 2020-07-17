@@ -9,6 +9,12 @@ up 20 left and 40 up from where it started, so you should return [-20, 40].
 """
 
 def mr_roboto(instructions) -> List[int]:
+    """This imparitive implementation relies on setting a mutable variable and
+    changing that variables value with each instruction in the list of
+    instructions.
+    """
+    # This initial declaration of a mutable variable is the core feature of an
+    # imperative algorithm. We are defining this value only to later change it.
     res = [0, 0]
     for instruction in instructions:
         direction, v_str = instruction.split(' ')
@@ -23,10 +29,11 @@ def mr_roboto(instructions) -> List[int]:
         elif direction == "left":
             cur_left, cur_right = [-val, 0]
         else:
-            # This should never happen but will catch cases where the direction
+            # This should never happen, but will catch cases where the direction
             # is invalid.
             cur_left, cur_right = [0, 0]
 
+        # With each iteration we are incrementing the initial value
         res = [res[0] + cur_left, res[1] + cur_right]
 
     return res

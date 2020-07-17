@@ -9,7 +9,7 @@ up 20 left and 40 up from where it started, so you should return [-20, 40].
 """
 
 def mr_roboto(instructions) -> Tuple[int, int]:
-    """This sort of niave functional algoritm relies on recursion to solve the
+    """This sort of naive functional algoritm relies on recursion to solve the
     problem. And thus the "truth" or result of this algoritm is that the
     solution is the sum of the parsed value of each instruction in addition to
     the value of an empty set of instructions, or

@@ -14,7 +14,7 @@ def mr_roboto(instructions) -> Tuple[int, int]:
     this problem. It uses the reduce funciton provided by the functools
     library, which although not imported by default, is a library that is
     included in the standard Python library with any Python3+ installation.
-    As with the "niave" functional implementation (and any funcitonal
+    As with the "naive" functional implementation (and any funcitonal
     algoritm) the return value can be expressed as a direct definition, or
     "truth." To be explicit, the return value here is the final accumulator
     value after calling add_val() on each value in instructions, whith the

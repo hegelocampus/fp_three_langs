@@ -20,7 +20,9 @@ def mr_roboto(instructions) -> Tuple[int, int]:
     held in lists like they are in the imperative implementation, but I'm using
     tuples in order to make it abundently clear that no value is ever mutated.
     """
-    # If the list is empty then the result will be (0, 0).
+    # If the list is empty then the result will be (0, 0). This will also work
+    # as the base case for the recursive call of the function. This is the
+    # starting value that all later values will be added onto.
     if not instructions:
         return (0, 0)
 

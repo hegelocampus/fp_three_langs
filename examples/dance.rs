@@ -6,6 +6,20 @@
 // up 20 left and 40 up from where it started, so you should return [-20, 40].
 
 fn mr_roboto(instructions: &[&str]) -> (i32, i32) {
+    // At its core this implemenation is doing almost exactly the same actual processing of the
+    // input as the second Python functional implementation. The biggest difference is that the
+    // steps can be broken up in the implementation into more easily understandable steps. This is
+    // because Rust has a thoughtful implementation of Lazy iterators. This is what is created with
+    // the iter() method call. This data structure allows for the later processing to be sort of
+    // added on to each individual element in the iterator. The actual processing of that function
+    // isn't actually done until the result is actually needed. In this step that would be during
+    // the fold method call, as the result of each of the steps is actually needed to produce the
+    // desired result. This lazy iteration allows for this algorithm to have a time complexity of
+    // O(n). If you aren't used to lazy iteration you may have thought that this algorithm has a
+    // time complexity of O(2n) because it appears that each of the objects in the list must be
+    // processed twice. But, because of the very clever optimizations provided by lazy evaluation,
+    // the logic of this algorithm is able to be broken up while retaining the same optimal time
+    // complexity.
     return instructions
         .iter()
         .map(|d_val_str| {

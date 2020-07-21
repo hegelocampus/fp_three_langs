@@ -6,7 +6,7 @@
 // up 20 left and 40 up from where it started, so you should return [-20, 40].
 
 fn mr_roboto(instructions: &[&str]) -> (i32, i32) {
-    // At its core this implemenation is doing almost exactly the same actual processing of the
+    // At its core this implementation is doing almost exactly the same actual processing of the
     // input as the second Python functional implementation. The biggest difference is that the
     // steps can be broken up in the implementation into more easily understandable steps. This is
     // because Rust has a thoughtful implementation of Lazy iterators. This is what is created with

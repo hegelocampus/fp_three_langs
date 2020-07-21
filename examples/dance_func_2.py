@@ -11,13 +11,13 @@ up 20 left and 40 up from where it started, so you should return [-20, 40].
 
 def mr_roboto(instructions) -> Tuple[int, int]:
     """I would consider this a slightly more advanced functional solution to
-    this problem. It uses the reduce funciton provided by the functools
+    this problem. It uses the reduce function provided by the functools
     library, which although not imported by default, is a library that is
     included in the standard Python library with any Python3+ installation.
-    As with the "naive" functional implementation (and any funcitonal
-    algoritm) the return value can be expressed as a direct definition, or
+    As with the "naive" functional implementation (and any functional
+    algorithm) the return value can be expressed as a direct definition, or
     "truth." To be explicit, the return value here is the final accumulator
-    value after calling add_val() on each value in instructions, whith the
+    value after calling add_val() on each value in instructions, with the
     initial starting value of (0,0). In other words:
     add_val(add_val(add_val((0, 0), instructions[0]), instructions[1]), ...).
     Note that this implementation also makes use of immutable tuples to hold
@@ -30,9 +30,9 @@ def add_val(acc, d_val) -> Tuple[int, int]:
     """Note how the values are never being mutated, but rather we are simply
     using a series of definitions to come to our solution. Rather than
     changing our initial values we are simply retuning new values. This adds
-    an additional layer of "safty" to our code because it removes the possibly
-    of  accidently or unknowingly changing values. Simply put, you can't
-    accidently change a value if you never mutate it.
+    an additional layer of "safety" to our code because it removes the possibly
+    of  accidentally or unknowingly changing values. Simply put, you can't
+    accidentally change a value if you never mutate it.
     """
     acc_left, acc_right = acc
     cur_left, cur_right = map_dir_to_pair(d_val)

@@ -9,30 +9,28 @@ fn mr_roboto(instructions: &[&str]) -> (i32, i32) {
     // At its core this implementation is doing almost exactly the same actual processing of the
     // input as the second Python functional implementation. The biggest difference is that the
     // steps can be broken up in the implementation into more easily understandable steps. This is
-    // because Rust has a thoughtful implementation of Lazy iterators. This is what is created with
-    // the iter() method call. This data structure allows for the later processing to be sort of
-    // added on to each individual element in the iterator. The actual processing of that function
-    // isn't actually done until the result is actually needed. In this step that would be during
-    // the fold method call, as the result of each of the steps is actually needed to produce the
-    // desired result. This lazy iteration allows for this algorithm to have a time complexity of
-    // O(n). If you aren't used to lazy iteration you may have thought that this algorithm has a
-    // time complexity of O(2n) because it appears that each of the objects in the list must be
-    // processed twice. But, because of the very clever optimizations provided by lazy evaluation,
-    // the logic of this algorithm is able to be broken up while retaining the same optimal time
-    // complexity.
+    // because Rust has a thoughtfully implementated Lazy iterators.
+    // With that being said, what do you think is the Big O time complexity of this
+    // algorithm? In other words, how many times do we need to iterate over a set of data to
+    // generate the needed results?
     return instructions
         .iter()
-        .map(|d_val_str| {
+        .map(|d_val_str| -> (&str, i32) {
             let d_val_arr: Vec<&str> = d_val_str.split_whitespace().collect();
-            let direction = d_val_arr[0];
-            let val = d_val_arr[1].parse::<i32>().unwrap();
-            return match direction {
+            println!("{} {}", d_val_arr[0], d_val_arr[1]);
+            // Here we are costructing a tuple out of the first element and the
+            // second element, which is also converted into a 32bit int.
+            return (d_val_arr[0], d_val_arr[1].parse().unwrap());
+        })
+        .map(|(direction, val)| {
+            println!("{} {}", direction, val);
+            match direction {
                 "up" => (0, val),
                 "down" => (0, -val),
                 "right" => (val, 0),
                 "left" => (-val, 0),
                 _ => panic!(),
-            };
+            }
         })
         .fold((0, 0), |(acc_l, acc_r), (cur_l, cur_r)| {
             (acc_l + cur_l, acc_r + cur_r)

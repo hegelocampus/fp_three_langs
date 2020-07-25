@@ -1,14 +1,3 @@
--- At its core this algorithm is working in an incredibly similar way to the
--- Rust version. The biggest difference is the actual order the operations come
--- in the syntax. Haskell is a little different from most other languages in
--- that it doesn't have methods (functions that are defined on a type), rather
--- it exclusively relies on functions. Because of this the order the operation
--- that is ran first should be furthest right, and the one that runs first
--- should be furthest left. Another weird askect is that functions aren't
--- called using parenthesis, rather they are called by passing arguments to
--- them with spaces to seperate them. For example (+) 1 1 would call the +
--- function on the parameters 1 and 1, returning 2. Of course there are also 
-
 mrRoboto :: [String] -> (Int, Int)
 mrRoboto instructions =
     foldl (\(acc_l, acc_r) (cur_l, cur_r) -> (acc_l + cur_l, acc_r + cur_r)) (0, 0)

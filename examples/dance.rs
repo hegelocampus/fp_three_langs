@@ -17,13 +17,11 @@ fn mr_roboto(instructions: &[&str]) -> (i32, i32) {
         .iter()
         .map(|d_val_str| -> (&str, i32) {
             let d_val_arr: Vec<&str> = d_val_str.split_whitespace().collect();
-            println!("{} {}", d_val_arr[0], d_val_arr[1]);
             // Here we are costructing a tuple out of the first element and the
             // second element, which is also converted into a 32bit int.
-            return (d_val_arr[0], d_val_arr[1].parse().unwrap());
+            (d_val_arr[0], d_val_arr[1].parse().unwrap())
         })
         .map(|(direction, val)| {
-            println!("{} {}", direction, val);
             match direction {
                 "up" => (0, val),
                 "down" => (0, -val),

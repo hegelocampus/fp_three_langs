@@ -3,9 +3,10 @@
 - Why am I writing this?
   - Learning Python and found some missing features that I had grown accustomed to
   - Want to help others understand how they can use functional programing to write more elegant, more easily understood algorithms
+  - To explain lazy evaluation of iterators, which I think is a kind of _weird_ concept if you're used to imperative programming
   - To analyze what "truth" is and how we can implement an understanding of truth to create better programing languages.
 - How this article is formated:
-  - Code examples, I'm going to give you some examples in order to ground our later discussion of what Functional programming is:
+  - Code examples, I'm going to give you some examples in order to ground our later discussion of what Functional programming is. These sub-sections will be an example followed by a brief bit of exposition that will seek to help you understand exactly what is happening in the algorithm.
 	- Python: Begin with a language that is not intuitive to use for functional programming, but is easy to understand to reach a broad audience
 	- Rust: Example of a language that allows for functional programming, but isn't strictly functional
 	- Haskell: A true functional language.
@@ -24,8 +25,66 @@
   - No multi-line lambdas. This is actually what drove me to write this article. Multi-line lambdas are a fundamental part of my workflow, when I learned that Python had no syntax to possibly allow for this it quickly made me realize that Python isn't a strong language pick for functional programming. Unfortunately it seems like this will always be the case because Pythons creator doesn't like how multi-line lambdas look and many Python developers seem to discourage lambda use all together.
 
 #### Examples 
-- First, an example of a non-functional, imperative implementation in order to ground our understanding of functional programming against what it is not.
-- Second, an example of a recursive, functional algorithm that doesn't use the build in tools for writing functional algorithms
+Before I give any examples heres the prompt that describes the problem that all of our algorithms will solve:
+> A robot has been given a list of movement instructions. Each instruction
+is either left, right, up or down, followed by a distance to move. The
+robot starts at 0, 0. You want to calculate where the robot will end up
+and return its final position as a list. For example, if the robot is given
+the instructions ["right 10", "up 50", "left 30", "down 10"], it will end
+up 20 left and 40 up from where it started, so you should return [-20, 40].  
+  
+To be explicitly clear as we get into this first set of examples, all of these algorithms strictly _work_ and produce the correct result. They also all have the time complexity of `O(n)` where n is the number of instructions in list that is passed into the algorithm. So, from the beginning I want you to know that I am not trying to argue that functional programming produces code that is better for technical reasons, but rather that you can use functional programming to write code that is easier for anyone looking at it to understand and allows you to more easily break down the logic in the problem into easier to tackle tasks that allow you to solve a programming problem quicker.  
+  
+I also want to make sure that you are aware that all of these examples are hosted at the GitHub repository for this article [here.](https://github.com/hegelocampus/fp_three_langs/tree/master/examples) Feel free to clone or fork this repository and do whatever you'd like with these, run them, modify them, break them; anything you'd like!
+
+This first example will be a imperative (therefore, not functional) implementation, I hope that we can use this example ground our understanding of functional programming against what it is not.
+
+##### Python Imperative Example
+```python
+from typing import List
+
+def mr_roboto(instructions) -> List[int]:
+    """This imperative implementation relies on setting a mutable variable and
+    changing that variables value with each instruction in the list of
+    instructions.
+    """
+    # This initial declaration of a mutable variable is the core feature of an
+    # imperative algorithm. We are defining this value only to later change it.
+    result = [0, 0]
+    for instruction in instructions:
+        direction, v_str = instruction.split(' ')
+        val = int(v_str)
+
+        if direction == "up":
+            cur_left, cur_right =  [0, val]
+        elif direction == "down":
+            cur_left, cur_right = [0, -val]
+        elif direction == "right":
+            cur_left, cur_right = [val, 0]
+        elif direction == "left":
+            cur_left, cur_right = [-val, 0]
+        else:
+            # This should never happen, but will catch cases where the direction
+            # is invalid.
+            cur_left, cur_right = [0, 0]
+
+        # With each iteration we are incrementing the initial value
+        result = [res[0] + cur_left, res[1] + cur_right]
+
+    return result
+```
+If you are used to the imperative programming paradigm then this implementation should probably be pretty easy for you to understand. Essentially what is happening in this algorithm is that we initialize a value that will be our result, and then we iterate over each element in the instructions list, processing that string into a from that can be easily parsed for the desired value, and then updating the result to be the sum of the old result and the new value. Then, after we've added each item onto the result, we return the result.  
+  
+Now, onto the driving question: Why isn't this a _functional_ algorithm? What would we have to change to make this a functional algorithm? Well to understand why this isn't functional lets again take a look at the definition of _functional_ programming. According to Wikipedia:
+> Functional programming is a programming paradigm where programs are constructed by applying and composing functions. It is a declarative programming paradigm in which function definitions are trees of expressions that each return a value, rather than a sequence of imperative statements which change the state of the program.  
+  
+So there are two clear, defining components for an algorithm to be considered functional:
+- It must apply and compose functions as a means to arrive at the solution.
+- It must use a **declaration** which defines the solution to be the result of a series of function applications. This means that **all the data structures within the function ought to be immutable if the algorithm is to be considered functional.**
+
+With these criteria in hand, lets see how our imperative algorithm stands up against them. 
+
+##### An example of a recursive, functional algorithm that doesn't use the build in tools for writing functional algorithms
 - Third, an example of a functional solution that takes advantage of the languages `functools` library
 
 ## Main Body 2

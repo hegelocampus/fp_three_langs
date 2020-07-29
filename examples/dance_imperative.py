@@ -9,7 +9,7 @@ up 20 left and 40 up from where it started, so you should return [-20, 40].
 """
 
 def mr_roboto(instructions) -> List[int]:
-    """This imparitive implementation relies on setting a mutable variable and
+    """This imperative implementation relies on setting a mutable variable and
     changing that variables value with each instruction in the list of
     instructions.
     """
